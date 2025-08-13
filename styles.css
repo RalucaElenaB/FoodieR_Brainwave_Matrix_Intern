@@ -128,6 +128,17 @@ nav a:hover {
     display: block;
     margin-left: 12px;
   }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px; /* spațiu între logo și buton meniu */
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* spațiu între logo și textul FoodieR */
+  }
 }
 
 /* ====== Hero ====== */
