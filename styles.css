@@ -14,9 +14,13 @@
 * {
   box-sizing: border-box;
 }
+* {
+  word-wrap: break-word;
+}
 html,
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 body {
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto;
@@ -185,6 +189,7 @@ nav a:hover {
   filter: brightness(1.05);
 }
 .slide-img {
+  position: relative; /* pentru poziționarea absolută a butoanelor în interior */
   aspect-ratio: 4/5;
   border-radius: 24px;
   overflow: hidden;
@@ -219,7 +224,7 @@ nav a:hover {
 }
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 50%; /* mijlocul imaginii */
   transform: translateY(-50%);
   background: #d9a3a1aa;
   border: 0;
@@ -240,6 +245,11 @@ nav a:hover {
 
 /* 📱 Mobil */
 @media (max-width: 768px) {
+  .hero-wrap {
+    grid-template-columns: 1fr; /* imaginea sub text */
+    gap: 16px;
+  }
+
   .arrow {
     width: 30px;
     height: 30px;
@@ -253,6 +263,7 @@ nav a:hover {
     right: 6px;
   }
 }
+
 /* ====== About ====== */
 .about {
   padding: 80px 0;
@@ -416,7 +427,7 @@ nav a:hover {
 }
 .btn {
   border: 1px solid #eee;
-  background: #fff;
+  background: #ecefd5;
   border-radius: 12px;
   padding: 10px 14px;
   cursor: pointer;
@@ -484,6 +495,12 @@ footer {
   text-align: center;
   padding: 12px 0;
   color: #aeb9c3;
+}
+@media (max-width: 768px) {
+  footer .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ====== Responsive ====== */
