@@ -533,11 +533,11 @@ footer {
   .modal-body {
     grid-template-columns: 1fr;
   } */
-  /* 📱 Responsive pentru telefon */
+/* 📱 Responsive pentru telefon */
 @media (max-width: 768px) {
   .modal-body {
     flex-direction: column; /* Stivuiește poza și textul */
-    align-items: center;    /* Centrează conținutul */
+    align-items: center; /* Centrează conținutul */
   }
 
   .modal-media,
@@ -548,7 +548,6 @@ footer {
   .modal-dialog {
     margin: 10px; /* mai puțin spațiu pe margini */
   }
-}
 }
 
 /* ===== Cart Drawer ===== */

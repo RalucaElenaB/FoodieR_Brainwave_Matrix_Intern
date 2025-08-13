@@ -46,7 +46,7 @@ const PRODUCTS = [
   {
     id: 1,
     title: "Alba ca zapada",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 25.0,
     rating: 4.56,
     img: "assets/photos/AlbaCaZapada.png",
@@ -63,7 +63,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Ciorba radauteana",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 35,
     rating: 4.86,
     img: "assets/photos/Ciorba.jpg",
@@ -89,7 +89,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Frigarui *produs vegan",
-    category: "Produs de post",
+    category: "De post",
     price: 30,
     rating: 4.86,
     img: "assets/photos/Frigaruipreparatvegan.jpg",
@@ -109,7 +109,7 @@ const PRODUCTS = [
   {
     id: 4,
     title: "Papanasi",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 16.14,
     rating: 4.36,
     img: "assets/photos/Papanasi.jpg",
@@ -122,7 +122,7 @@ const PRODUCTS = [
   {
     id: 5,
     title: "Ciorba rosie cu cartofi",
-    category: "Produs de post",
+    category: "De post",
     price: 1199,
     rating: 4.9,
     img: "assets/photos/CiorbaRosie.jpg",
@@ -162,7 +162,7 @@ const PRODUCTS = [
   {
     id: 8,
     title: "Burgher *produs vegan",
-    category: "Produs de post",
+    category: "De post",
     price: 1399,
     rating: 4.7,
     img: "assets/photos/BurgherVegan.jpg",
@@ -176,7 +176,7 @@ const PRODUCTS = [
   {
     id: 9,
     title: "Ciorba cu perisoare",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 199,
     rating: 4.5,
     img: "assets/photos/CiorbaPerisoare.jpg",
@@ -189,7 +189,7 @@ const PRODUCTS = [
   {
     id: 10,
     title: "Cornuri cu rahat",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 179,
     rating: 4.4,
     img: "assets/photos/CornuriRahat2.jpg",
@@ -203,7 +203,7 @@ const PRODUCTS = [
   {
     id: 11,
     title: "Donuts la cuptor",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 179,
     rating: 4.4,
     img: "assets/photos/DonutsCuptor.jpg",
@@ -217,7 +217,7 @@ const PRODUCTS = [
   {
     id: 12,
     title: "Shaorma",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 179,
     rating: 4.4,
     img: "assets/photos/Shaorma.jpg",
@@ -231,7 +231,7 @@ const PRODUCTS = [
   {
     id: 13,
     title: "Shaorma *produs vegan",
-    category: "Produs de post",
+    category: "De post",
     price: 179,
     rating: 4.4,
     img: "assets/photos/ShaormaVegana.jpg",
@@ -245,7 +245,7 @@ const PRODUCTS = [
   {
     id: 14,
     title: "Spaghete cu sos alb",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 179,
     rating: 4.4,
     img: "assets/photos/Spaghete2.jpg",
@@ -259,7 +259,7 @@ const PRODUCTS = [
   {
     id: 15,
     title: "Salata calda *produs vegan",
-    category: "Produs de post",
+    category: "De post",
     price: 179,
     rating: 4.4,
     img: "assets/photos/SalataCaldaVegana.jpg",
@@ -273,7 +273,7 @@ const PRODUCTS = [
   {
     id: 16,
     title: "Rulada",
-    category: "Produs de frupt",
+    category: "De frupt",
     price: 179,
     rating: 4.4,
     img: "assets/photos/RuladaCotlet.jpg",
@@ -285,11 +285,11 @@ const PRODUCTS = [
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
 ];
-const CATEGORIES = ["All Products", "Produs de frupt", "Produs de post"];
+const CATEGORIES = ["All food", "De frupt", "De post"];
 
 /* ========== FILTERS ========== */
 const filtersEl = document.getElementById("filters");
-let activeCat = "All Products";
+let activeCat = "All food";
 function renderFilters() {
   filtersEl.innerHTML = CATEGORIES.map(
     (c) =>
@@ -374,7 +374,7 @@ function cardTemplate(p) {
 
 function renderProducts() {
   const items = PRODUCTS.filter(
-    (p) => activeCat === "All Products" || p.category === activeCat
+    (p) => activeCat === "All food" || p.category === activeCat
   );
   grid.innerHTML = items.map(cardTemplate).join("");
 }
