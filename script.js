@@ -47,7 +47,7 @@ const PRODUCTS = [
     id: 1,
     title: "Alba ca zapada",
     category: "De frupt",
-    price: 25.0,
+    price: 28.0,
     rating: 4.56,
     img: "assets/photos/AlbaCaZapada.png",
     desc: "O prăjitură clasică, fină și răcoritoare, cu cremă delicată de lămâie",
@@ -94,7 +94,7 @@ const PRODUCTS = [
     id: 4,
     title: "Papanasi",
     category: "De frupt",
-    price: 16.14,
+    price: 25,
     rating: 4.36,
     img: "assets/photos/Papanasi.jpg",
     desc: "Desert cu brânză dulce, servit cu smântână și dulceață.",
@@ -107,7 +107,7 @@ const PRODUCTS = [
     id: 5,
     title: "Ciorba rosie cu cartofi",
     category: "De post",
-    price: 1199,
+    price: 25,
     rating: 4.9,
     img: "assets/photos/CiorbaRosie.jpg",
     desc: "O ciorbă acrișoară cu sfeclă și cartofi, plină de vitamine și savoare.",
@@ -121,7 +121,7 @@ const PRODUCTS = [
     id: 6,
     title: "Boabe de naut prajite in cuptor *produs vegan",
     category: "Produs de post",
-    price: 999,
+    price: 16,
     rating: 4.6,
     img: "assets/photos/BoabeNaut.jpg",
     desc: "O gustare crocantă și sănătoasă, plină de proteine vegetale.",
@@ -134,7 +134,7 @@ const PRODUCTS = [
     id: 7,
     title: "Briose *produs vegan",
     category: "Produs de post",
-    price: 1499,
+    price: 12,
     rating: 4.8,
     img: "assets/photos/BrioseVegane.jpg",
     desc: "Pufoase și aromate, perfecte pentru o pauză dulce fără produse de origine animală.",
@@ -147,7 +147,7 @@ const PRODUCTS = [
     id: 8,
     title: "Burgher *produs vegan",
     category: "De post",
-    price: 1399,
+    price: 25,
     rating: 4.7,
     img: "assets/photos/BurgherVegan.jpg",
     desc: "Chiflă proaspătă cu legume crocante si nutritive.",
@@ -161,7 +161,7 @@ const PRODUCTS = [
     id: 9,
     title: "Ciorba cu perisoare",
     category: "De frupt",
-    price: 199,
+    price: 25,
     rating: 4.5,
     img: "assets/photos/CiorbaPerisoare.jpg",
     desc: "Ciorbă gustoasă cu perișoare fragede din carne și legume.",
@@ -174,7 +174,7 @@ const PRODUCTS = [
     id: 10,
     title: "Cornuri cu rahat",
     category: "De frupt",
-    price: 179,
+    price: 5,
     rating: 4.4,
     img: "assets/photos/CornuriRahat2.jpg",
     desc: "Aluat fraged, umplut cu rahat aromat, pentru momente dulci.",
@@ -188,7 +188,7 @@ const PRODUCTS = [
     id: 11,
     title: "Donuts la cuptor",
     category: "De frupt",
-    price: 179,
+    price: 15,
     rating: 4.4,
     img: "assets/photos/DonutsCuptor.jpg",
     desc: "Gogoși pufoase, coapte și glazurate, cu mai puține calorii.",
@@ -202,7 +202,7 @@ const PRODUCTS = [
     id: 12,
     title: "Shaorma",
     category: "De frupt",
-    price: 179,
+    price: 30,
     rating: 4.4,
     img: "assets/photos/Shaorma.jpg",
     desc: " lipie proaspătă cu carne fragedă, legume crocante și sos aromat.",
@@ -216,7 +216,7 @@ const PRODUCTS = [
     id: 13,
     title: "Shaorma *produs vegan",
     category: "De post",
-    price: 179,
+    price: 26,
     rating: 4.4,
     img: "assets/photos/ShaormaVegana.jpg",
     desc: "Lipie cu chiftea vegetală și legume proaspete, pentru un gust autentic fără carne.",
@@ -230,7 +230,7 @@ const PRODUCTS = [
     id: 14,
     title: "Spaghete cu sos alb",
     category: "De frupt",
-    price: 179,
+    price: 35,
     rating: 4.4,
     img: "assets/photos/Spaghete2.jpg",
     desc: "Paste cu sos cremos, îmbogățit cu ierburi aromatice.",
@@ -244,7 +244,7 @@ const PRODUCTS = [
     id: 15,
     title: "Salata calda *produs vegan",
     category: "De post",
-    price: 179,
+    price: 30,
     rating: 4.4,
     img: "assets/photos/SalataCaldaVegana.jpg",
     desc: "Legume sotate ușor, păstrându-și prospețimea și aroma naturală.",
@@ -258,7 +258,7 @@ const PRODUCTS = [
     id: 16,
     title: "Rulada cu carne si conopida",
     category: "De frupt",
-    price: 179,
+    price: 30,
     rating: 4.4,
     img: "assets/photos/RuladaCotlet.jpg",
     desc: "Preparat savuros, cu umplutură de carne fragedă și conopidă aromată.",
@@ -298,9 +298,11 @@ function stars(r) {
   const f = Math.round(r);
   return "★".repeat(f) + "☆".repeat(5 - f);
 }
-function priceFmt(p) {
-  return `$${p.toFixed(2)}`;
+
+function priceFmt(value) {
+  return value.toLocaleString("ro-RO", { style: "currency", currency: "RON" });
 }
+
 function salePrice(p) {
   return p.sale && p.discount ? p.price * (1 - p.discount / 100) : p.price;
 }
