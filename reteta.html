@@ -1,0 +1,21 @@
+<!-- reteta.html -->
+<body>
+  <div id="recipe"></div>
+  <script src="products.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+    const prod = PRODUCTS.find((p) => p.id === id);
+
+    if (prod) {
+      document.getElementById("recipe").innerHTML = `
+        <h1>${prod.title}</h1>
+        <img src="${prod.img}" style="max-width:300px">
+        <p>${prod.desc}</p>
+        <div>${prod.tags.map((t) => `<span>${t}</span>`).join(", ")}</div>
+      `;
+    } else {
+      document.getElementById("recipe").innerHTML = `<p>Rețetă negăsită</p>`;
+    }
+  </script>
+</body>
