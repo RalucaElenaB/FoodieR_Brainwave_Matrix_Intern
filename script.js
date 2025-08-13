@@ -339,32 +339,35 @@ function macroGradient({ protein = 20, carbs = 50, fat = 15 }) {
 function cardTemplate(p) {
   const isSale = p.sale && p.discount,
     newPrice = salePrice(p);
+
   return `<article class="card">
-    <div class="thumb">${
-      isSale ? '<span class="badge-sale">-' + p.discount + "%</span>" : ""
-    }<img src="${p.img}" alt="${p.title}"></div>
+    <div class="thumb">
+      <img src="${p.img}" alt="${p.title}">
+    </div>
     <div class="content">
       <h3>${p.title}</h3>
-      <div class="rating" aria-label="Rating ${p.rating}">${stars(
-    p.rating
-  )} <span style="color:#8c97a0;font-size:14px">(${p.rating.toFixed(
-    2
-  )})</span></div>
+      <div class="rating" aria-label="Rating ${p.rating}">
+        ${stars(p.rating)} 
+        <span style="color:#8c97a0;font-size:14px">(${p.rating.toFixed(
+          2
+        )})</span>
+      </div>
       <p class="excerpt">${p.desc}</p>
       <div class="price-row">
-        <div><span class="price">${priceFmt(newPrice)}</span>${
-    isSale ? '<span class="old-price">' + priceFmt(p.price) + "</span>" : ""
-  }</div>
-        ${isSale ? '<span class="badge-sale">Sale</span>' : ""}
+        <div>
+          <span class="price">${priceFmt(newPrice)}</span>
+          ${isSale ? `<span class="old-price">${priceFmt(p.price)}</span>` : ""}
+        </div>
+        ${isSale ? `<span class="badge-sale">Sale -${p.discount}%</span>` : ""}
       </div>
     </div>
     <div class="actions">
-      <button class="btn details" data-id="${
-        p.id
-      }"><i class="ri-eye-line"></i> Details</button>
-      <button class="btn primary add-cart" data-id="${
-        p.id
-      }"><i class="ri-shopping-cart-2-line"></i> Add to Cart</button>
+      <button class="btn details" data-id="${p.id}">
+        <i class="ri-eye-line"></i> Details
+      </button>
+      <button class="btn primary add-cart" data-id="${p.id}">
+        <i class="ri-shopping-cart-2-line"></i> Add to Cart
+      </button>
     </div>
   </article>`;
 }
@@ -375,12 +378,13 @@ function renderProducts() {
   );
   grid.innerHTML = items.map(cardTemplate).join("");
 }
-function renderSale() {
-  const items = PRODUCTS.filter((p) => p.sale);
-  saleGrid.innerHTML = items.map(cardTemplate).join("");
-}
-renderProducts();
-renderSale();
+
+// function renderSale() {
+//   const items = PRODUCTS.filter((p) => p.sale);
+//   saleGrid.innerHTML = items.map(cardTemplate).join("");
+// }
+// renderProducts();
+// renderSale();
 
 /* ========== CART (drawer) ========== */
 const badge = document.getElementById("cartCount");
