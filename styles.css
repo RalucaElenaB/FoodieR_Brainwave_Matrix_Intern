@@ -128,6 +128,15 @@ nav a:hover {
   max-width: 640px;
   color: var(--muted);
 }
+
+.hero-copy {
+  text-align: center;
+}
+
+.hero-copy .cta {
+  display: inline-block; /* să respecte centrul textului */
+}
+
 .cta {
   display: inline-block;
   margin-top: 22px;
@@ -136,9 +145,8 @@ nav a:hover {
   border: 0;
   padding: 14px 22px;
   border-radius: 14px;
-  font-weight: 700;
-  box-shadow: var(--shadow);
 }
+
 .cta:hover {
   filter: brightness(1.05);
 }
@@ -148,6 +156,14 @@ nav a:hover {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* taie marginile ca să umple tot */
+  display: block; /* elimină spațiul alb de sub imagine */
+}
+
 .slider-dots {
   display: flex;
   gap: 8px;

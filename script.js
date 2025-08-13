@@ -1,9 +1,9 @@
 /* ========== HERO SLIDER ========== */
 const slides = [
-  "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1520975682031-a6b5bbf7bce8?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop",
+  "assets/photos/FelPrincipal.jpg",
+  "assets/photos/Ciorba.jpg",
+  "assets/photos/Frigarui preparat vegan.jpg",
+  "assets/photos/Colaboration.png",
 ];
 let current = 0;
 const heroImage = document.getElementById("heroImage");
