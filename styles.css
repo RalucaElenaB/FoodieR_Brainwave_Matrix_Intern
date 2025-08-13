@@ -102,9 +102,31 @@ nav a:hover {
 }
 .menu-toggle {
   display: none;
-  border: 0;
+  border: none;
   background: transparent;
-  font-size: 26px;
+  font-size: 28px;
+  color: var(--brand, #333);
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background: rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.menu-toggle:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* ====== Hero ====== */

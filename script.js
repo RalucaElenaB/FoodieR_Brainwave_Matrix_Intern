@@ -524,3 +524,26 @@ document.addEventListener("keydown", (e) => {
     closeCart();
   }
 });
+
+//menu button mobil
+const menuToggle = document.querySelector(".menu-toggle");
+const menuIcon = menuToggle.querySelector("i");
+const menu = document.querySelector("nav ul.menu");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = menu.classList.toggle("open");
+
+  // schimbă iconul
+  if (isOpen) {
+    menuIcon.classList.remove("ri-menu-3-line");
+    menuIcon.classList.add("ri-close-line");
+  } else {
+    menuIcon.classList.remove("ri-close-line");
+    menuIcon.classList.add("ri-menu-3-line");
+  }
+
+  // afișează/ascunde meniul
+  menu.style.display = isOpen ? "flex" : "none";
+  menu.style.flexDirection = "column";
+  menu.style.gap = "14px";
+});
