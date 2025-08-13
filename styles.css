@@ -483,6 +483,8 @@ footer {
 .contact li {
   margin: 6px 0;
   font-size: 12px;
+  word-break: break-word; /* Sparge cuvinte lungi */
+  overflow-wrap: anywhere; /* Permite ruperea oriunde dacă e nevoie */
 }
 .contact i {
   margin-right: 8px;
