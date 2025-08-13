@@ -50,14 +50,10 @@ const PRODUCTS = [
     price: 25.0,
     rating: 4.56,
     img: "assets/photos/AlbaCaZapada.png",
-    desc: "Prajitura copilariei mele.",
+    desc: "O prăjitură clasică, fină și răcoritoare, cu cremă delicată de lămâie",
     sale: false,
     ingredients: ["Lapte de vaca", "Faina de grau", "Zahar", "Lamaie"],
-    steps: [
-      "Curăță genele.",
-      "Aplică strat de bază.",
-      "Aplică mascara în zig-zag.",
-    ],
+    steps: ["", "", ""],
     macros: { protein: 6, carbs: 44, fat: 10, kcal: 300 },
   },
   {
@@ -67,7 +63,7 @@ const PRODUCTS = [
     price: 35,
     rating: 4.86,
     img: "assets/photos/Ciorba.jpg",
-    desc: "O ciorba buna, sanatoasa, satioasa.",
+    desc: "Supă cremoasă de pui, aromată cu usturoi și smântână.",
     sale: true,
     discount: 20,
     ingredients: [
@@ -78,12 +74,6 @@ const PRODUCTS = [
       "Ou",
       "Smantana",
     ],
-    steps: [
-      "Aplică primer.",
-      "Culoare de tranziție.",
-      "Definește colțul extern.",
-      "Iluminează colțul intern.",
-    ],
     macros: { protein: 12, carbs: 38, fat: 14, kcal: 360 },
   },
   {
@@ -92,17 +82,11 @@ const PRODUCTS = [
     category: "De post",
     price: 30,
     rating: 4.86,
-    img: "assets/photos/Frigaruipreparatvegan.jpg",
-    desc: "O ciorba buna, sanatoasa, satioasa.",
+    img: "assets/photos/FrigaruiVegan.jpg",
+    desc: "Legume proaspete și tofu rumenit, pe bețe de frigărui, pline de culoare.",
     sale: false,
     discount: 20,
     ingredients: ["Ardei", "Morcov", "Ceapa", "Telina", "Tofu", "Dovlecel"],
-    steps: [
-      "Aplică primer.",
-      "Culoare de tranziție.",
-      "Definește colțul extern.",
-      "Iluminează colțul intern.",
-    ],
     macros: { protein: 12, carbs: 38, fat: 14, kcal: 360 },
   },
 
@@ -113,10 +97,10 @@ const PRODUCTS = [
     price: 16.14,
     rating: 4.36,
     img: "assets/photos/Papanasi.jpg",
-    desc: "Ruj clasic, accent de culoare.",
+    desc: "Desert cu brânză dulce, servit cu smântână și dulceață.",
     sale: false,
     ingredients: ["Ou", "Faina", "Indulcitor", "Branza"],
-    steps: ["Hidratează buzele.", "Conturează.", "Aplică rujul."],
+
     macros: { protein: 18, carbs: 46, fat: 16, kcal: 410 },
   },
   {
@@ -126,11 +110,11 @@ const PRODUCTS = [
     price: 1199,
     rating: 4.9,
     img: "assets/photos/CiorbaRosie.jpg",
-    desc: "Gustos, sanatos, colorat.",
+    desc: "O ciorbă acrișoară cu sfeclă și cartofi, plină de vitamine și savoare.",
     sale: true,
     discount: 10,
     ingredients: ["Cartofi", "Sfecla", "Bors"],
-    steps: ["Pornește.", "Configurează.", "Fă o poză."],
+
     macros: { protein: 15, carbs: 55, fat: 10, kcal: 420 },
   },
   {
@@ -140,10 +124,10 @@ const PRODUCTS = [
     price: 999,
     rating: 4.6,
     img: "assets/photos/BoabeNaut.jpg",
-    desc: "O gustare sanatoasa si nutritiva.",
+    desc: "O gustare crocantă și sănătoasă, plină de proteine vegetale.",
     sale: false,
     ingredients: ["Boabe naut", "Condimente"],
-    steps: ["Pornește.", "Transferă date.", "Personalizează."],
+
     macros: { protein: 22, carbs: 48, fat: 14, kcal: 460 },
   },
   {
@@ -153,10 +137,10 @@ const PRODUCTS = [
     price: 1499,
     rating: 4.8,
     img: "assets/photos/BrioseVegane.jpg",
-    desc: "Subțire, rapid și silențios.",
+    desc: "Pufoase și aromate, perfecte pentru o pauză dulce fără produse de origine animală.",
     sale: true,
     ingredients: ["Aluminiu", "Baterie Li-Ion", "Placă logică"],
-    steps: ["Despachetează.", "Configurează.", "Instalează."],
+
     macros: { protein: 16, carbs: 52, fat: 12, kcal: 430 },
   },
   {
@@ -166,11 +150,11 @@ const PRODUCTS = [
     price: 1399,
     rating: 4.7,
     img: "assets/photos/BurgherVegan.jpg",
-    desc: "Laptop premium pentru productivitate.",
+    desc: "Chiflă proaspătă cu legume crocante si nutritive.",
     sale: false,
     discount: 12,
     ingredients: ["Chifla", "Dovlecel", "Ridiche", "Maioneza vegana"],
-    steps: ["Pornește.", "Update drivere.", "Setează energie."],
+
     macros: { protein: 19, carbs: 49, fat: 13, kcal: 440 },
   },
   {
@@ -180,10 +164,10 @@ const PRODUCTS = [
     price: 199,
     rating: 4.5,
     img: "assets/photos/CiorbaPerisoare.jpg",
-    desc: "Parfum iconic, rafinat.",
+    desc: "Ciorbă gustoasă cu perișoare fragede din carne și legume.",
     sale: false,
     ingredients: ["Note aldehidice", "Iasomie", "Trandafir", "Mosc"],
-    steps: ["Pulverizează pe puls."],
+
     macros: { protein: 14, carbs: 50, fat: 12, kcal: 410 },
   },
   {
@@ -193,11 +177,11 @@ const PRODUCTS = [
     price: 179,
     rating: 4.4,
     img: "assets/photos/CornuriRahat2.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: "Aluat fraged, umplut cu rahat aromat, pentru momente dulci.",
     sale: false,
     discount: 18,
     ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
   {
@@ -207,11 +191,11 @@ const PRODUCTS = [
     price: 179,
     rating: 4.4,
     img: "assets/photos/DonutsCuptor.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: "Gogoși pufoase, coapte și glazurate, cu mai puține calorii.",
     sale: true,
     discount: 18,
-    ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+    ingredients: ["Faina", "Ou", "Ciocolata"],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
   {
@@ -221,11 +205,11 @@ const PRODUCTS = [
     price: 179,
     rating: 4.4,
     img: "assets/photos/Shaorma.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: " lipie proaspătă cu carne fragedă, legume crocante și sos aromat.",
     sale: true,
     discount: 18,
-    ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+    ingredients: ["Piept de pui", "Lipie", "Cartofi", "Muraturi"],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
   {
@@ -235,11 +219,11 @@ const PRODUCTS = [
     price: 179,
     rating: 4.4,
     img: "assets/photos/ShaormaVegana.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: "Lipie cu chiftea vegetală și legume proaspete, pentru un gust autentic fără carne.",
     sale: false,
     discount: 18,
-    ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+    ingredients: ["Salata", "Ciuperci", "Lipie"],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
   {
@@ -249,11 +233,11 @@ const PRODUCTS = [
     price: 179,
     rating: 4.4,
     img: "assets/photos/Spaghete2.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: "Paste cu sos cremos, îmbogățit cu ierburi aromatice.",
     sale: true,
     discount: 18,
-    ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+    ingredients: ["Spaghete", "Ou", "Lapte"],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
   {
@@ -263,25 +247,25 @@ const PRODUCTS = [
     price: 179,
     rating: 4.4,
     img: "assets/photos/SalataCaldaVegana.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: "Legume sotate ușor, păstrându-și prospețimea și aroma naturală.",
     sale: true,
     discount: 18,
-    ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+    ingredients: ["Tofu", "Maioneza", "Salata"],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
   {
     id: 16,
-    title: "Rulada",
+    title: "Rulada cu carne si conopida",
     category: "De frupt",
     price: 179,
     rating: 4.4,
     img: "assets/photos/RuladaCotlet.jpg",
-    desc: "Aromă proaspătă și puternică.",
+    desc: "Preparat savuros, cu umplutură de carne fragedă și conopidă aromată.",
     sale: true,
     discount: 18,
-    ingredients: ["Bergamotă", "Ambroxan", "Piper Sichuan"],
-    steps: ["Pulverizează la 15–20 cm."],
+    ingredients: ["Carne", "ou", "Conopida"],
+
     macros: { protein: 21, carbs: 47, fat: 14, kcal: 455 },
   },
 ];
