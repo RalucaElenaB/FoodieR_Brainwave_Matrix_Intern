@@ -2,7 +2,7 @@
 const slides = [
   "assets/photos/FelPrincipal.jpg",
   "assets/photos/Ciorba.jpg",
-  "assets/photos/Frigarui preparat vegan.jpg",
+  "assets/photos/DonutsCuptor.jpg",
   "assets/photos/Colaboration.png",
 ];
 let current = 0;

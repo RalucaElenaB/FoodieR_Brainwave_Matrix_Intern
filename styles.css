@@ -222,6 +222,7 @@ nav a:hover {
 .lead {
   font-size: 18px;
   color: var(--muted);
+  text-align: center;
 }
 .stats {
   display: grid;
@@ -264,7 +265,7 @@ nav a:hover {
 }
 /* ====== Products ====== */
 .products {
-  padding: 80px 0;
+  padding: 20px 0;
 }
 .section-title {
   font-size: 36px;
